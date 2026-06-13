@@ -1,6 +1,6 @@
 # IBM Data Analyst Capstone — Developer Ecosystem Analysis 2024
 
-**Kwesi Designs | June 2026**  
+**Derrick Scott | June 2026**  
 IBM Data Analyst Professional Certificate Capstone Project
 
 ---
