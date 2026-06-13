@@ -1,41 +1,213 @@
-# IBM Data Analyst Capstone — Developer Ecosystem Analysis 2024
+# Developer Ecosystem Analysis 2024
 
-**Derrick Scott | June 2026**  
-IBM Data Analyst Professional Certificate Capstone Project
+A comprehensive technology trend analysis pipeline that combines job market demand, salary data, and developer survey insights to identify current and emerging technologies across the software industry.
+
+![Python](https://img.shields.io/badge/Python-3.8+-blue)
+![Pandas](https://img.shields.io/badge/Pandas-2.0+-green)
+![IBM Cognos](https://img.shields.io/badge/IBM-Cognos%20Analytics-orange)
+
+**[Portfolio](https://derrickscottux-collab.github.io/) · [LinkedIn](https://www.linkedin.com/in/derrick-scott-980109236/)**
 
 ---
 
-## Project Overview
+# Developer Ecosystem Analysis 2024
 
-This capstone analyzes technology trends from the **2024 Stack Overflow Developer Survey** to identify current and future preferences across programming languages, databases, cloud platforms, and web frameworks. Data was collected via REST API calls, web scraping, and survey datasets, then visualized using Python and IBM Cognos Analytics.
+## Overview
+
+This project started as the capstone assignment for the IBM Data Analytics Professional Certificate, but I expanded it significantly beyond the original course requirements.
+
+Rather than treating the capstone as a collection of separate exercises, I built a consolidated analysis notebook that brings together all three required data collection methods into a single workflow:
+
+- REST API data collection for technology job postings
+- Web scraping for programming language salary data
+- Survey processing and analysis using the 2024 Stack Overflow Developer Survey
+
+The final presentation was redesigned as a portfolio project rather than a standard course submission.
+
+The intended audience for this analysis includes hiring managers, technical leaders, workforce planners, and organizations evaluating technology investments or employee upskilling initiatives. Findings are structured to support data-driven decisions about technology adoption, hiring priorities, and future skill development.
 
 ---
+
+## Business Question
+
+**Which technologies are developers using today, and which technologies do they want to use next year?**
+
+This project examines current adoption and future demand across:
+
+- Programming Languages
+- Databases
+- Cloud Platforms
+- Web Frameworks
+
+The goal is to identify technologies that organizations should hire for, invest in, or monitor as part of long-term technology strategy.
+
+---
+
+## Why This Matters
+
+Technology decisions influence hiring costs, training investments, productivity, and long-term maintainability.
+
+This analysis helps stakeholders:
+
+- Identify technologies with strong long-term momentum
+- Understand which skills are becoming baseline industry expectations
+- Spot emerging technologies before widespread adoption
+- Reduce hiring risk associated with declining technology stacks
+- Prioritize employee upskilling initiatives
+
+---
+
+## Workflow Diagram
+
+> Replace the image below with your workflow graphic.
+
+![Workflow Diagram Placeholder](images/workflow-diagram-placeholder.png)
+
+### Suggested Workflow Diagram Structure
+
+```text
+Jobs API
+    ↓
+Web Scraping
+    ↓
+Stack Overflow Survey Data
+    ↓
+Data Cleaning & Validation
+    ↓
+Exploratory Data Analysis
+    ↓
+CSV Export Generation
+    ↓
+IBM Cognos Dashboard
+    ↓
+Business Recommendations
+```
+
+---
+
+## Analysis Architecture
+
+```text
+API Data Collection → Web Scraping → Survey Processing
+          ↓                  ↓               ↓
+     Data Cleaning & Validation
+                    ↓
+           Exploratory Analysis
+                    ↓
+        Technology Trend Insights
+                    ↓
+      Dashboard Development (Cognos)
+                    ↓
+          Presentation & Reporting
+```
+
+---
+
+## Features
+
+- Multi-source data collection using APIs, web scraping, and survey datasets
+- Unified analysis notebook that combines all project components into a single workflow
+- Technology trend analysis across programming languages, databases, cloud platforms, and web frameworks
+- Current vs future adoption comparisons to identify emerging technologies
+- Interactive IBM Cognos dashboards for stakeholder-focused reporting
+- Demographic analysis exploring age, education, and geographic distribution
+- Portfolio-focused presentation designed for professional audiences rather than coursework evaluation
+
+---
+
+## Dashboard Screenshots
+
+### Dashboard Tab 1: Current Technology Usage
+
+> Replace with screenshot of Cognos Dashboard Tab 1
+
+![Current Technology Usage Dashboard](current_tech_usage.png)
+
+### Dashboard Tab 2: Future Technology Trends
+
+> Replace with screenshot of Cognos Dashboard Tab 2
+
+![Future Technology Trends Dashboard](future_tech_trend.png)
+
+### Dashboard Tab 3: Developer Demographics
+
+> Replace with screenshot of Cognos Dashboard Tab 3
+
+![Developer Demographics Dashboard](demographics.png)
+
+---
+
+## Business Questions Answered
+
+- Which programming languages are most widely used today?
+- Which technologies are gaining momentum among developers?
+- Which databases are most likely to see future adoption growth?
+- Which cloud platforms are strongest in both current and future usage?
+- Which frameworks should organizations invest in for long-term relevance?
+- What technologies may present future hiring and maintenance risks?
 
 ## Key Findings
 
-- **PostgreSQL** dominates both current and desired database usage
-- **JavaScript** remains the most widely used language, but desire is shifting toward TypeScript
-- **Go and Rust** are rising fast in desired adoption despite lower current usage
-- **AWS** leads cloud platform adoption; Cloudflare is the fastest-rising alternative
-- **React and Node.js** lead web frameworks; **Next.js** shows strong future momentum
-- Legacy tools (jQuery, PHP, Oracle) show declining desired usage — a hiring risk signal
+### Programming Languages
+
+- JavaScript remains the most widely used language with nearly 15,000 respondents
+- TypeScript continues gaining adoption and ranks among the most desired languages
+- Go and Rust emerged as major growth technologies in future preference rankings
+- HTML/CSS usage remains high but future interest shows signs of decline
+
+### Databases
+
+- PostgreSQL ranks #1 in both current and desired usage
+- Desired PostgreSQL adoption exceeds current adoption, signaling continued growth
+- Redis shows one of the largest jumps in future demand
+- Supabase appears as a new entrant among desired technologies
+
+### Cloud Platforms
+
+- AWS remains the dominant cloud platform
+- Microsoft Azure and Google Cloud maintain strong enterprise adoption
+- Cloudflare shows the strongest growth among established cloud providers
+- Supabase enters the future rankings as a growing platform ecosystem
+
+### Web Frameworks
+
+- React and Node.js remain the dominant technologies
+- Next.js continues gaining momentum
+- FastAPI and Svelte appear among future-focused technologies
+- jQuery disappears from desired rankings, signaling long-term decline
+
+---
+
+## Business Recommendations
+
+### Hire for the Core Stack
+
+TypeScript, PostgreSQL, and AWS rank highly in both current and desired usage. These technologies have become baseline expectations across much of the industry.
+
+### Invest in Emerging Technologies
+
+Go, Rust, FastAPI, Next.js, and Cloudflare demonstrate strong growth signals. Organizations investing early may gain competitive advantages in hiring and development efficiency.
+
+### Reduce Legacy Risk
+
+jQuery, PHP, Oracle, and Heroku show declining future interest. Organizations heavily dependent on these technologies may face increased hiring and maintenance challenges over time.
 
 ---
 
 ## Repository Structure
 
-```
+```text
 ibm-data-analyst-capstone/
 │
 ├── notebooks/
-│   └── IBM_Capstone_Full_Analysis.ipynb   # Full analysis: API, scraping, survey processing
+│   └── IBM_Capstone_Full_Analysis.ipynb
 │
 ├── data/
-│   ├── popular-languages.csv              # Scraped language salary data
-│   ├── job-postings.xlsx                  # Job counts by city (from Jobs API)
-│   └── job-skills.xlsx                    # Job counts by technology skill (from Jobs API)
+│   ├── popular-languages.csv
+│   ├── job-postings.xlsx
+│   └── job-skills.xlsx
 │
-├── exports/                               # Top-10 CSVs for IBM Cognos dashboards
+├── exports/
 │   ├── tab_1_csv_language_top10.csv
 │   ├── tab_1_csv_database_top10.csv
 │   ├── tab_1_csv_platform_top10.csv
@@ -45,56 +217,83 @@ ibm-data-analyst-capstone/
 │   ├── tab_2_csv_platform_want_top10.csv
 │   └── tab_2_csv_webframe_want_top10.csv
 │
+├── images/
+│   ├── workflow-diagram.png
+│   ├── current_tech_usage.png
+│   ├── future_tech_trend.png
+│   └── demographics.png
+│
 ├── presentation/
 │   └── Developer_Ecosystem_Analysis_2024.pdf
 │
-└── README.md
+├── README.md
+└── requirements.txt
 ```
 
 ---
 
-## Notebook Sections
+## Data Collection Methods
 
-| Part | Description | Output |
-|------|-------------|--------|
-| Part 1 — Jobs API | Fetches open job postings by technology skill and city | `job-postings.xlsx`, `job-skills.xlsx` |
-| Part 2 — Web Scraping | Scrapes programming language average annual salary data | `popular-languages.csv` |
-| Part 3 — Survey Processing | Processes Stack Overflow survey; generates top-10 counts per category | 8 CSV files in `exports/` |
-
----
-
-## Tools & Technologies
-
-- **Python** — pandas, requests, BeautifulSoup, openpyxl
-- **IBM Cognos Analytics** — 3-tab interactive dashboard (Current Usage, Future Trends, Demographics)
-- **Data Source** — [2024 Stack Overflow Developer Survey](https://survey.stackoverflow.co/)
-- **IBM Skills Network** — Jobs API endpoint, hosted dataset
+| Method | Purpose | Output |
+|----------|----------|----------|
+| Jobs API | Analyze employer demand by technology and location | Job posting datasets |
+| Web Scraping | Collect programming language salary information | Salary comparison dataset |
+| Survey Analysis | Analyze technology usage and future preferences | Dashboard-ready CSV exports |
 
 ---
 
-## Dashboard Tabs
+## Technologies Used
 
-| Tab | Charts |
-|-----|--------|
-| Current Technology Usage | Top 10 Languages (bar), Top 10 Databases (column), Top 10 Platforms (word cloud), Top 10 Web Frameworks (bubble) |
-| Future Technology Trend | Top 10 Languages (bar), Top 10 Databases (column), Top 10 Platforms (tree map), Top 10 Web Frameworks (bubble) |
-| Demographics | Age distribution (pie), Respondents by country (map), Education level (line), Age × Education (stacked bar) |
+### Data Analysis
+
+- Python
+- Pandas
+- NumPy
+- OpenPyXL
+
+### Data Collection
+
+- Requests
+- BeautifulSoup
+
+### Visualization & Reporting
+
+- IBM Cognos Analytics
+- Jupyter Notebook
 
 ---
 
-## How to Run the Notebook
+## Project Deliverables
 
-1. Clone this repo
-2. Download `survey_data_updated.csv` from the [IBM Skills Network dataset](https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBM-DA0321EN-SkillsNetwork/LargeData/m1_survey_data.csv) and place it in the root directory
-3. Install dependencies:
-   ```bash
-   pip install pandas requests beautifulsoup4 openpyxl
-   ```
-4. Open `notebooks/IBM_Capstone_Full_Analysis.ipynb` and run all cells
+- End-to-end analysis notebook
+- Multi-source data collection pipeline
+- Processed datasets and exports
+- IBM Cognos dashboard
+- Executive-style presentation
+- Business recommendations and technology trend analysis
+
+---
+
+## Origin
+
+Originally developed as the IBM Data Analyst Professional Certificate Capstone Project.
+
+The portfolio version extends the original coursework by consolidating all project phases into a single end-to-end workflow and redesigning the presentation to communicate findings to hiring managers, technical leaders, and business stakeholders.
+
+---
+
+## Author
+
+**Derrick Scott**
+
+[Portfolio](https://derrickscottux-collab.github.io/)
+| [LinkedIn](https://www.linkedin.com/in/derrick-scott-980109236/)
+| [GitHub](https://github.com/derrickscottux-collab)
 
 ---
 
 ## Certificate
 
-IBM Data Analyst Professional Certificate — Coursera  
-[View Certificate](https://coursera.org/share/7ff1b11bbe1327c2e8d815bbcdf52150)
+IBM Data Analyst Professional Certificate
+
+https://coursera.org/share/7ff1b11bbe1327c2e8d815bbcdf52150
