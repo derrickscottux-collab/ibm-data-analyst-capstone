@@ -10,8 +10,6 @@ A comprehensive technology trend analysis pipeline that combines job market dema
 
 ---
 
-# Developer Ecosystem Analysis 2024
-
 ## Overview
 
 This project started as the capstone assignment for the IBM Data Analytics Professional Certificate, but I expanded it significantly beyond the original course requirements.
@@ -57,47 +55,20 @@ This analysis helps stakeholders:
 
 ---
 
-## Workflow Diagram
+## Pipeline Architecture
 
-![Workflow Diagram Placeholder](images/workflow-diagram.png)
-
-### Workflow Diagram Structure
+![Workflow Diagram](images/workflow-diagram.png)
 
 ```text
-Jobs API
-    ↓
-Web Scraping
-    ↓
-Stack Overflow Survey Data
-    ↓
-Data Cleaning & Validation
-    ↓
-Exploratory Data Analysis
-    ↓
-CSV Export Generation
-    ↓
-IBM Cognos Dashboard
-    ↓
-Business Recommendations
+Jobs API → Web Scraping → Stack Overflow Survey Data
+     → Data Cleaning & Validation
+     → Exploratory Analysis
+     → CSV Export Generation
+     → IBM Cognos Dashboard
+     → Business Recommendations
 ```
 
----
-
-## Analysis Architecture
-
-```text
-API Data Collection → Web Scraping → Survey Processing
-          ↓                  ↓               ↓
-     Data Cleaning & Validation
-                    ↓
-           Exploratory Analysis
-                    ↓
-        Technology Trend Insights
-                    ↓
-      Dashboard Development (Cognos)
-                    ↓
-          Presentation & Reporting
-```
+Each stage has a clear input and output. Nothing downstream runs without the stage before it completing cleanly.
 
 ---
 
@@ -186,7 +157,7 @@ jQuery, PHP, Oracle, and Heroku show declining future interest. Organizations he
 
 ---
 
-## Repository Structure
+## Project Structure
 
 ```text
 ibm-data-analyst-capstone/
@@ -252,6 +223,27 @@ ibm-data-analyst-capstone/
 
 - IBM Cognos Analytics
 - Jupyter Notebook
+
+---
+
+## Getting Started
+
+### Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run
+
+1. Clone the repo
+   ```bash
+   git clone https://github.com/derrickscottux-collab/ibm-data-analyst-capstone.git
+   ```
+2. Open `notebooks/IBM_Capstone_Full_Analysis.ipynb` in Jupyter or VS Code
+3. Run all cells — **Kernel → Restart & Run All**
+
+All exports and dashboard-ready CSVs will regenerate automatically.
 
 ---
 
