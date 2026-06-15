@@ -6,7 +6,7 @@ A comprehensive technology trend analysis pipeline that combines job market dema
 ![Pandas](https://img.shields.io/badge/Pandas-2.0+-green)
 ![IBM Cognos](https://img.shields.io/badge/IBM-Cognos%20Analytics-orange)
 
-**[Portfolio](https://derrickscottux-collab.github.io/) · [LinkedIn](https://www.linkedin.com/in/derrick-scott-980109236/)**
+**[Portfolio](https://derrickscottux-collab.github.io/) · [LinkedIn](https://www.linkedin.com/in/derrick-scott-980109236/) · [Presentation](presentation/Developer_Ecosystem_Analysis_2024.pdf)**
 
 ---
 
