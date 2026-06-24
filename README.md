@@ -272,7 +272,7 @@ The portfolio version extends the original coursework by consolidating all proje
 
 [Portfolio](https://derrickscottux-collab.github.io/)
 | [LinkedIn](https://www.linkedin.com/in/derrick-scott-980109236/)
-| [GitHub](https://github.com/derrickscottux-collab)
+| [GitHub](hhttps://github.com/derrick-scott)
 
 ---
 
